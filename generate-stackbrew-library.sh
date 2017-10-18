@@ -11,7 +11,6 @@ defaultAlpineVersion='3.6'
 declare -A alpineVersion=(
 	[5.6]='3.4'
 	[7.0]='3.4'
-	[7.1]='3.6'
 )
 
 declare -A aliases=(

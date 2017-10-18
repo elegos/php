@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM alpine:3.4
+FROM alpine:3.6
 
 # persistent / runtime deps
 ENV PHPIZE_DEPS \
@@ -24,7 +24,7 @@ RUN apk add --no-cache --virtual .persistent-deps \
 		tar \
 		xz \
 # https://github.com/docker-library/php/issues/494
-		openssl
+		libressl
 
 # ensure www-data user exists
 RUN set -x \
@@ -96,7 +96,7 @@ RUN set -xe \
 		coreutils \
 		curl-dev \
 		libedit-dev \
-		openssl-dev \
+		libressl-dev \
 		libxml2-dev \
 		sqlite-dev \
 	\
